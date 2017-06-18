@@ -1,0 +1,125 @@
+::-webkit-scrollbar { display: none; }
+@keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Roboto'), local('Roboto-Regular'),
+	url('fonts/roboto-v16-latin-regular.woff2') format('woff2'),
+	url('fonts/roboto-v16-latin-regular.woff') format('woff');
+}
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Roboto', sans-serif;
+	background-color: #F2F2F2;
+	background-position: center top;
+	-webkit-animation: fadein 0.5s;
+}
+a { color: #555; text-decoration: none; }
+.content {
+	position: absolute;
+	z-index: 0;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0%;
+	padding: 0px;
+}
+.content input[type=text] {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 20%;
+	height: 14px;
+	padding: 8px 10px;
+	background: url('img/search.png') 90% 10px no-repeat;
+	background-color: #FFF;
+	border-radius: 2px;
+	border: 1px solid #ddd;
+}
+.mouseover {
+	position: fixed;
+	z-index: 1;
+	height: 100%;
+	width: 5%;
+	top: 0;
+	right: 0;
+	display: table;
+	overflow-x: hidden;
+	text-align: center;
+}
+.mouseover span {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 3em;
+	color: rgba(53,48,49,0.3);
+}
+.sidebar {
+	position: fixed;
+	z-index: 2;
+	height: 100%;
+	width: 15%;
+	top: 0;
+	right: -15%;
+	padding: 0px;
+	padding-top: 10px;
+	background-color: #FFF;
+	box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+	overflow-x: hidden;
+	overflow-y: scroll;
+	transition: 0.5s;
+}
+.sidebar .search{ text-align:center; }
+.sidebar .search input[type=text] {
+	padding: 8px 10px;
+	margin: 10px;
+	background: url('img/search_tabs.png') 90% 10px no-repeat;
+	background-color: #FFF;
+	border-radius: 2px;
+	border: 1px solid #ddd;
+}
+.sidebar h1{
+	margin: 10px;
+	color: #1C1C1C;
+	text-align: center;
+	font-size: 1.3em;
+	vertical-align:middle;
+}
+.sidebar h1 img {
+	padding: 0px;
+	padding-left: 5px;
+	width: 12px;
+	height: 12px;
+	transition: 0.3s;
+}
+.sidebar .list a {
+	display: block;
+	padding: 12px 20px 12px 52px;
+	overflow: hidden;
+	font-size: 0.9em;
+	color: #555;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	background-image: url('img/fav_na.png');
+	background-size: 16px 16px;
+	background-position: 20px center;
+	background-repeat: no-repeat;
+	transition: 0.3s;
+}
+.sidebar .list a:hover, .offcanvas a:focus{
+	color: #000;
+	background-color: #EAEAEA;
+	text-decoration: underline;
+}
+.sidebar .list {
+	padding-bottom: 20px;
+}
+.sidebar .list h4 {
+	padding-top: 20px;
+	text-align: center;
+}
